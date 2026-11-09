@@ -10,14 +10,15 @@
 
 <body>
 
-  <header class="bg-primary text-white py-3">
+  <header class="row bg-primary text-white py-3">
     <!-- Logo a sinistra, link nav a destra. Usa container + d-flex + justify-content-between -->
     <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="fs-3 m-0">EpiShop</h1>
+      <h1 class="fs-3 m-0 p-2">EpiShop</h1>
       <nav>
-        <a href="#" class="text-white text-decoration-none mx-2">Prodotti</a>
+        <a href="#evidence" class="text-white text-decoration-none mx-2">Prodotti</a>
         <a href="#" class="text-white text-decoration-none mx-2">Offerte</a>
-        <a href="#" class="text-white text-decoration-none mx-2">Contatti</a>
+        <a href="#site-footer" class="text-white text-decoration-none mx-2 d-none d-md-inline">Contatti</a>
+        <a href="#" class="text-white text-decoration-none mx-2 d-none d-lg-inline">Account</a>
       </nav>
     </div>
   </header>
@@ -27,7 +28,8 @@
     <div class="container text-center">
       <h2 class="fs-1 fw-bold mb-3">Saldi di Primavera</h2>
       <p class="fs-5 text-muted mb-4">Scopri le offerte sui prodotti in evidenza, fino al 50% di sconto</p>
-      <a href="#" class="d-inline-block bg-primary text-white text-decoration-none py-2 px-4 rounded">Vedi prodotti</a>
+      <a href="#evidence" class="d-inline-block bg-primary text-white text-decoration-none py-2 px-4 rounded">Vedi
+        prodotti</a>
     </div>
   </section>
 
@@ -37,7 +39,7 @@
       <aside class="col-lg-3 d-none d-lg-block">
         <!-- Sidebar categorie. Visibile solo da lg in su (d-none d-lg-block) -->
         <div class="bg-light p-3 rounded border">
-          <h3 class="fs-5 fw-bold mb-3 ">Categorie</h3>
+          <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
           <p class="m-0 mb-2">Scarpe</p>
           <p class="m-0 mb-2">T-shirt</p>
           <p class="m-0 mb-2">Borse</p>
@@ -45,7 +47,7 @@
         </div>
       </aside>
 
-      <section class="col-12 col-lg-9">
+      <section class="col-12 col-lg-9" id="evidence">
         <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
         <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">Prodotti in evidenza</h2>
         <div class="row">
@@ -54,6 +56,7 @@
               <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
               <h3 class="fs-5 fw-bold m-0">Sneaker Run</h3>
               <p class="text-muted m-0">€89,00</p>
+              <p class="text-danger text-decoration-line-through m-0">€120,00</p>
             </div>
           </article>
 
@@ -62,6 +65,7 @@
               <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
               <h3 class="fs-5 fw-bold m-0">T-shirt basic</h3>
               <p class="text-muted m-0">€19,00</p>
+              <p class="text-danger text-decoration-line-through m-0">€30,00</p>
             </div>
           </article>
 
@@ -70,6 +74,7 @@
               <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
               <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
               <p class="text-muted m-0">€49,00</p>
+              <p class="text-danger text-decoration-line-through m-0">€90,00</p>
             </div>
           </article>
         </div>
@@ -77,11 +82,28 @@
     </div>
   </main>
 
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="bg-dark text-white py-4 mt-5" id="site-footer">
     <!-- Footer scuro centrato con copyright -->
-     <div class="container text-center">
+    <div class="container text-center mb-3">
       <p class="m-0">© 2026 EpiShop - tutti i diritti riservati</p>
-     </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-4 text-center">
+        <h4 class="fs-5 fw-bold m-0">Azienda</h3>
+          <a href="#" class="text-decoration-none">Epicode</a>
+      </div>
+
+      <div class="col-12 col-md-4 text-center">
+        <h4 class="fs-5 fw-bold m-0">Aiuto</h4>
+        <a href="#" class="text-decoration-none">Chiedi</a>
+      </div>
+
+      <div class="col-12 col-md-4 text-center">
+        <h4 class="fs-5 fw-bold m-0">Social</h3>
+          <a href="#" class="text-decoration-none"></a>
+      </div>
+    </div>
   </footer>
 
 </body>
