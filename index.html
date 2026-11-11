@@ -12,7 +12,34 @@
 
   <header class="row bg-primary text-white py-3">
     <!-- Logo a sinistra, link nav a destra. Usa container + d-flex + justify-content-between -->
-    <div class="container d-flex justify-content-between align-items-center">
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link myLink btn btn-primary active" aria-current="page" href="#evidence">Prodotti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link myLink btn btn-primary" href="#">Offerte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link myLink btn btn-primary" href="#site-footer">Contatti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link myLink btn btn-primary" href="#">Account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- <div class="container d-flex justify-content-between align-items-center">
       <h1 class="fs-3 m-0 p-2">EpiShop</h1>
       <nav>
         <a href="#evidence" class="text-white text-decoration-none mx-2">Prodotti</a>
@@ -20,22 +47,59 @@
         <a href="#site-footer" class="text-white text-decoration-none mx-2 d-none d-md-inline">Contatti</a>
         <a href="#" class="text-white text-decoration-none mx-2 d-none d-lg-inline">Account</a>
       </nav>
-    </div>
-  </header>
+    </div> -->
 
-  <section class="bg-light py-5">
+
+  <section class="# text-light">
     <!-- Hero: titolo grande, sottotitolo, bottone CTA. Usa container + text-center + classi utility -->
-    <div class="container text-center">
+    <div id="hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active bg-primary text-center py-5 h-100r" style="min-height: 300px;">
+          <div class="container text-center ">
+            <h2 class="fs-1 fw-bold mb-3">Saldi di Primavera</h2>
+            <p class="fs-5 text-white mb-4">Scopri le offerte sui prodotti in evidenza, fino al 50% di sconto</p>
+            <a href="#evidence"
+              class="d-inline-block bg-primary text-white text-decoration-none py-2 px-4 rounded btn btn-primary">Vedi
+              prodotti</a>
+          </div>
+        </div>
+
+
+        <div class="carousel-item active bg-success text-center  py-5 h-100" style="min-height: 300px;">
+          <div class="container text-center ">
+            <h2 class="fs-1 fw-bold mb-3">Nuova collezione</h2>
+            <p class="fs-5 text-white mb-4">Scopri gli arrivi della settimana</p>
+          </div>
+        </div>
+
+        <div class="carousel-item active bg-dark text-center py-5 h-100" style="min-height: 300px;">
+          <div class="container text-center ">
+            <h2 class="fs-1 fw-bold mb-3">Spedizione gratis</h2>
+            <p class="fs-5 text-white mb-4">Sopra i 50€ su tutto il sito</p>
+          </div>
+        </div>
+
+
+      </div>
+      <button class="carousel-control-prev" data-bs-target="#hero" data-bs-slide="prev"> - </button>
+      <button class="carousel-control-next" data-bs-target="#hero" data-bs-slide="next"> + </button>
+    </div>
+    <!-- <div class="container text-center">
       <h2 class="fs-1 fw-bold mb-3">Saldi di Primavera</h2>
       <p class="fs-5 text-muted mb-4">Scopri le offerte sui prodotti in evidenza, fino al 50% di sconto</p>
       <a href="#evidence" class="d-inline-block bg-primary text-white text-decoration-none py-2 px-4 rounded">Vedi
         prodotti</a>
-    </div>
+    </div> -->
   </section>
 
   <main class="container my-4">
     <div class="row">
 
+      <!-- SIDEBAR CATEGORIE -->
+      <!-- col-lg-3: occupa 3 colonne su 12 da schermi grandi in su -->
+      <!-- d-none d-lg-block: nascosta sotto lg, visibile da lg in su -->
       <aside class="col-lg-3 d-none d-lg-block">
         <!-- Sidebar categorie. Visibile solo da lg in su (d-none d-lg-block) -->
         <div class="bg-light p-3 rounded border">
@@ -47,40 +111,169 @@
         </div>
       </aside>
 
+      <!-- col-12: su mobile occupa tutta la larghezza; col-lg-9: da lg in su occupa 9 colonne su 12 -->
       <section class="col-12 col-lg-9" id="evidence">
         <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
-        <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">Prodotti in evidenza</h2>
+        <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">Prodotti in evidenza
+          <!-- span badge: piccola etichetta rossa (bg-danger) sulla stessa riga del titolo -->
+          <span class="badge bg-danger fs-6">-30%</span>
+        </h2>
+
+        <!-- Griglia delle card: row contiene le colonne -->
         <div class="row">
+
+          <!-- CARD 1 -->
+          <!-- col-12: 1 card per riga su mobile; col-sm-6: 2 su tablet; col-xl-4: 3 su desktop -->
           <article class="col-12 col-sm-6 col-xl-4 mb-3">
-            <div class="border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
-              <h3 class="fs-5 fw-bold m-0">Sneaker Run</h3>
-              <p class="text-muted m-0">€89,00</p>
-              <p class="text-danger text-decoration-line-through m-0">€120,00</p>
+            <!-- card: il componente; h-100: altezza piena della colonna, così tutte le card della riga sono uguali -->
+            <!-- shadow-sm: ombra leggera -->
+            <div class="card h-100 border rounded p-3 bg-white shadow-sm">
+              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
+                <img src="https://placehold.co/300x180" class="card-img-top" alt="Sneaker Run">
+              </div>
+
+              <div class="card-body">
+                <h3 class="fs-5 fw-bold m-0">Sneaker Run</h3>
+                <p class="text-muted m-0">€89,00</p>
+                <p class="text-danger text-decoration-line-through m-0">€120,00</p>
+              </div>
+
+              <!-- card-footer: la fascia in fondo; border-0 toglie la linea sopra -->
+              <div class="card-footer bg-white border-0">
+                <!-- data-bs-toggle="modal": al clic apre un modal -->
+                <!-- data-bs-target="#prodotto-1": il modal da aprire ha id="prodotto-1" -->
+                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                  data-bs-target="#prodotto-1">Dettagli</button>
+              </div>
             </div>
           </article>
 
+          <!-- CARD 2 -->
           <article class="col-12 col-sm-6 col-xl-4 mb-3">
-            <div class="border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
-              <h3 class="fs-5 fw-bold m-0">T-shirt basic</h3>
-              <p class="text-muted m-0">€19,00</p>
-              <p class="text-danger text-decoration-line-through m-0">€30,00</p>
+            <div class="card h-100 border rounded p-3 bg-white shadow-sm">
+              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
+                <img src="https://placehold.co/300x180" class="card-img-top" alt="T-shirt basic">
+              </div>
+
+              <div class="card-body">
+                <h3 class="fs-5 fw-bold m-0">T-shirt basic</h3>
+                <p class="text-muted m-0">€19,00</p>
+                <p class="text-danger text-decoration-line-through m-0">€30,00</p>
+              </div>
+
+              <div class="card-footer bg-white border-0">
+                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                  data-bs-target="#prodotto-2">Dettagli</button>
+              </div>
             </div>
           </article>
 
+          <!-- CARD 3 -->
           <article class="col-12 col-sm-6 col-xl-4 mb-3">
-            <div class="border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
-              <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
-              <p class="text-muted m-0">€49,00</p>
-              <p class="text-danger text-decoration-line-through m-0">€90,00</p>
+
+            <div class="card h-100 border rounded p-3 bg-white shadow-sm">
+              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
+                <img src="https://placehold.co/300x180" class="card-img-top" alt="Borsa city">
+              </div>
+
+              <div class="card-body">
+                <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
+                <p class="text-muted m-0">€49,00</p>
+                <p class="text-danger text-decoration-line-through m-0">€90,00</p>
+              </div>
+
+              <div class="card-footer bg-white border-0">
+                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                  data-bs-target="#prodotto-3">Dettagli</button>
+              </div>
             </div>
           </article>
         </div>
 
     </div>
   </main>
+
+  <!-- Il modal è nascosto finché il button delle card prodotti non lo apre -->
+  <!-- id: deve essere unico; è il nome a cui punta il bottone -->
+  <!-- fade: dissolvenza in entrata/uscita; tabindex="-1": permette di chiuderlo con Esc -->
+
+  <!-- MODAL 1: -->
+  <div class="modal fade" id="prodotto-1" tabindex="-1" aria-labelledby="prodotto-1-label" aria-hidden="true">
+    <!-- modal-dialog: la finestra vera e propria, con larghezza e posizione -->
+    <div class="modal-dialog">
+      <!-- modal-content: il riquadro bianco con bordi e ombra -->
+      <div class="modal-content">
+
+        <!-- Intestazione: titolo e bottone X -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="prodotto-1-label">Sneaker Run</h5>
+          <!-- btn-close: la X; data-bs-dismiss="modal": chiude il modal -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+
+        <!-- Corpo: immagine, descrizione e prezzo -->
+        <div class="modal-body">
+          <!-- img-fluid: l'immagine si adatta alla larghezza, senza uscire dal box -->
+          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="Sneaker Run">
+          <p>Scarpa leggera e ammortizzata, pensata per lunghe corse su asfalto.</p>
+          <p class="fw-bold fs-4 m-0">€89,00</p>
+        </div>
+        <!-- Piè di pagina: due bottoni -->
+        <div class="modal-footer">
+          <!-- btn-secondary: grigio; chiude il modal -->
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <!-- btn-success: verde; per ora non fa nulla -->
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2 -->
+  <div class="modal fade" id="prodotto-2" tabindex="-1" aria-labelledby="prodotto-2-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="prodotto-2-label">T-shirt basic</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="T-shirt basic">
+          <p>T-shirt in cotone morbido, adatta a ogni occasione.</p>
+          <p class="fw-bold fs-4 m-0">€19,00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3:-->
+  <div class="modal fade" id="prodotto-3" tabindex="-1" aria-labelledby="prodotto-3-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="prodotto-3-label">Borsa city</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="Borsa city">
+          <p>Borsa spaziosa con tasche interne, ideale per il lavoro e il tempo libero.</p>
+          <p class="fw-bold fs-4 m-0">€49,00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
   <footer class="bg-dark text-white py-4 mt-5" id="site-footer">
     <!-- Footer scuro centrato con copyright -->
@@ -106,6 +299,8 @@
     </div>
   </footer>
 
+  <!-- Fa funzionare hamburger, carosello, modal e alert -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
