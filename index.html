@@ -120,74 +120,14 @@
         </h2>
 
         <!-- Griglia delle card: row contiene le colonne -->
-        <div class="row">
+        <div class="row" id="container-prodotti">
 
           <!-- CARD 1 -->
-          <!-- col-12: 1 card per riga su mobile; col-sm-6: 2 su tablet; col-xl-4: 3 su desktop -->
-          <article class="col-12 col-sm-6 col-xl-4 mb-3">
-            <!-- card: il componente; h-100: altezza piena della colonna, così tutte le card della riga sono uguali -->
-            <!-- shadow-sm: ombra leggera -->
-            <div class="card h-100 border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
-                <img src="https://placehold.co/300x180" class="card-img-top" alt="Sneaker Run">
-              </div>
-
-              <div class="card-body">
-                <h3 class="fs-5 fw-bold m-0">Sneaker Run</h3>
-                <p class="text-muted m-0">€89,00</p>
-                <p class="text-danger text-decoration-line-through m-0">€120,00</p>
-              </div>
-
-              <!-- card-footer: la fascia in fondo; border-0 toglie la linea sopra -->
-              <div class="card-footer bg-white border-0">
-                <!-- data-bs-toggle="modal": al clic apre un modal -->
-                <!-- data-bs-target="#prodotto-1": il modal da aprire ha id="prodotto-1" -->
-                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                  data-bs-target="#prodotto-1">Dettagli</button>
-              </div>
-            </div>
-          </article>
 
           <!-- CARD 2 -->
-          <article class="col-12 col-sm-6 col-xl-4 mb-3">
-            <div class="card h-100 border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
-                <img src="https://placehold.co/300x180" class="card-img-top" alt="T-shirt basic">
-              </div>
-
-              <div class="card-body">
-                <h3 class="fs-5 fw-bold m-0">T-shirt basic</h3>
-                <p class="text-muted m-0">€19,00</p>
-                <p class="text-danger text-decoration-line-through m-0">€30,00</p>
-              </div>
-
-              <div class="card-footer bg-white border-0">
-                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                  data-bs-target="#prodotto-2">Dettagli</button>
-              </div>
-            </div>
-          </article>
 
           <!-- CARD 3 -->
-          <article class="col-12 col-sm-6 col-xl-4 mb-3">
 
-            <div class="card h-100 border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
-                <img src="https://placehold.co/300x180" class="card-img-top" alt="Borsa city">
-              </div>
-
-              <div class="card-body">
-                <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
-                <p class="text-muted m-0">€49,00</p>
-                <p class="text-danger text-decoration-line-through m-0">€90,00</p>
-              </div>
-
-              <div class="card-footer bg-white border-0">
-                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                  data-bs-target="#prodotto-3">Dettagli</button>
-              </div>
-            </div>
-          </article>
         </div>
 
     </div>
@@ -301,6 +241,7 @@
 
   <!-- Fa funzionare hamburger, carosello, modal e alert -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/script/scipt.js"></script>
 </body>
 
 </html>
