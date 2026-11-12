@@ -1,0 +1,23 @@
+/*  Tema scuro*/
+
+/* Ridefinisco le variabili che Bootstrap usa per i colori */
+body.dark {
+  --bs-body-bg: #121212;          /* sfondo della pagina */
+  --bs-body-color: #f0f0f0;       /* testo principale */
+  --bs-secondary-color: #adb5bd;  /* testo secondario (es. text-muted) */
+  --bs-card-bg: #1e1e1e;          /* sfondo delle card */
+  --bs-tertiary-bg: #1e1e1e;      /* sfondo di bg-body-tertiary (sidebar) */
+  --bs-border-color: #333333;     /* colore dei bordi */
+}
+
+/* L'header ha bg-primary, che è una classe con colore fisso.
+   Nel tema scuro la sovrascrivo*/
+body.dark #header-principale {
+  background-color: #121212 !important;
+}
+
+/* Transizione morbida quando si passa da un tema all'altro */
+body,
+#header-principale {
+  transition: background-color 200ms ease, color 200ms ease;
+}

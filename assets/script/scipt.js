@@ -37,6 +37,7 @@ const carousel = [
 //variabili globali
 const productContainer = document.getElementById("container-prodotti");
 const carouselContainer = document.getElementById("carousel-container");
+const darkMode = document.getElementById("dark-mode");
 
 
 // funzioni
@@ -156,14 +157,14 @@ function creaCard() {
 
         //assegno le classi
         article.classList.add("col-12", "col-sm-6", "col-xl-4", "mb-3");
-        cardContainer.classList.add("card", "h-100", "border", "rounded", "p-3", "bg-white", "shadow-sm");
+        cardContainer.classList.add("card", "h-100", "border", "rounded", "p-3", "shadow-sm");
         imgContainer.classList.add("mb-2", "rounded");
         placeholder.classList.add("card-img-top", "h-100");
         cardBody.classList.add("card-body");
         productName.classList.add("fs-5", "fw-bold", "m-0");
         productPrice.classList.add("text-danger", "text-decoration-line-through", "m-0");
-        discountPrice.classList.add("text-muted", "m-0");
-        cardFooter.classList.add("card-footer", "bg-white", "border-0");
+        discountPrice.classList.add( "m-0");
+        cardFooter.classList.add("card-footer", "border-0");
         buttonDetails.classList.add("btn", "btn-primary", "w-100");
 
         //eventuali attributi
@@ -195,6 +196,11 @@ function creaCard() {
         article.appendChild(cardContainer);
     })
 }
+
+//gestione dark mode
+darkMode.addEventListener("click", function(){
+    document.body.classList.toggle("dark")
+})
 
 creaCarousel();
 creaCard();
